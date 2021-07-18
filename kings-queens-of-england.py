@@ -10,11 +10,11 @@ year = int(input("Enter a year between 757 and 2017:"))
 
 file = open("Files/Monarchs-of-England.csv", "r")
 for line in file.readlines():
-    res =line.strip().split(",")
-    start = int(res[0])
-    end = int(res[1])
+    data =line.strip().split(",")
+    start = int(data[0])
+    end = int(data[1])
     rng = range(start,end+1)
-    if year >=start and year <= end:
+    if year in rng:
         print(res[2])
     
         
